@@ -21,7 +21,7 @@ def readDetails(contract_type):
     web3 = Web3(HTTPProvider(blockchain_address))
     web3.eth.defaultAccount = web3.eth.accounts[0]
     compiled_contract_path = 'CertificateVerification.json' #certification verification contract code
-    deployed_contract_address = '0x7ac7cd1656626c244E426C469082027f1D468b45' #hash address to access certification verification contract
+    deployed_contract_address = '0x4236Bb693239DdCEF81080B7762A4FA8e237bCaA' #hash address to access certification verification contract
     with open(compiled_contract_path) as file:
         contract_json = json.load(file)  # load contract info as JSON
         contract_abi = contract_json['abi']  # fetch contract's abi - necessary to call its functions
@@ -44,7 +44,7 @@ def saveDataBlockChain(currentData, contract_type):
     web3 = Web3(HTTPProvider(blockchain_address))
     web3.eth.defaultAccount = web3.eth.accounts[0]
     compiled_contract_path = 'CertificateVerification.json' #certification verification contract file
-    deployed_contract_address = '0x7ac7cd1656626c244E426C469082027f1D468b45' #contract address
+    deployed_contract_address = '0x4236Bb693239DdCEF81080B7762A4FA8e237bCaA' #contract address
     with open(compiled_contract_path) as file:
         contract_json = json.load(file)  # load contract info as JSON
         contract_abi = contract_json['abi']  # fetch contract's abi - necessary to call its functions
